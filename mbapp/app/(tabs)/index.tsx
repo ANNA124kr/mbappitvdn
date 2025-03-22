@@ -1,15 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet, Switch } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
+import ButtonCustom from '../../components/buttons/ButtonCustom';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import PressableCustom from '@/components/buttons/PressableCustom';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+    <SafeAreaView style={styles.container} >
+    <View>
+      <ButtonCustom/>
+      <PressableCustom/>
     </View>
+    </SafeAreaView>
   );
 }
 
